@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Haryana Chess Association</title>
+    <meta name="description" content="View photos from chess tournaments and events organized by Haryana Chess Association.">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="styles/main.css" rel="stylesheet">
+    <link href="styles/gallery.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <div class="logo-img">
+                    <img src="logo.png" alt="HCA Logo">
+                </div>
+                <span class="logo-text">Haryana Chess Association</span>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about-us.html" class="nav-link">About Us</a>
+                <a href="ratings.html" class="nav-link">Ratings</a>
+                <a href="affiliated-units.html" class="nav-link">Affiliated Units</a>
+                <a href="tournament-calendar.html" class="nav-link">Tournament Calendar</a>
+                <a href="live-pairings.html" class="nav-link">Live Pairings & Results</a>
+                <a href="certificate-download.html" class="nav-link">Certificate Download</a>
+                <a href="rulebook.html" class="nav-link">Rulebook</a>
+                <a href="online-registration.html" class="nav-link">Online Registration</a>
+                <a href="gallery.html" class="nav-link active">Gallery</a>
+                <a href="mission.html" class="nav-link">Mission</a>
+                <a href="education.html" class="nav-link">HCA in Education</a>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">Gallery</h1>
+            <p class="page-subtitle">Capturing moments from chess tournaments and events</p>
+        </div>
+    </section>
+
+    <!-- Gallery Filters -->
+    <section class="gallery-filters">
+        <div class="container">
+            <div class="filter-controls">
+                <div class="filter-group">
+                    <label>Filter by Category:</label>
+                    <select id="category-filter">
+                        <option value="all">All Categories</option>
+                        <option value="tournaments">Tournaments</option>
+                        <option value="awards">Awards Ceremony</option>
+                        <option value="workshops">Workshops</option>
+                        <option value="seminars">Seminars</option>
+                        <option value="education">Education Programs</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label>Sort by:</label>
+                    <select id="sort-filter">
+                        <option value="newest">Newest First</option>
+                        <option value="oldest">Oldest First</option>
+                        <option value="name">Name A-Z</option>
+                        <option value="category">Category</option>
+                    </select>
+                </div>
+                
+                <div class="search-group">
+                    <input type="text" id="gallery-search" placeholder="Search images...">
+                    <button class="search-btn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Grid -->
+    <section class="gallery-section">
+        <div class="container">
+            <div class="gallery-grid" id="gallery-grid">
+                <!-- Gallery items will be loaded here -->
+            </div>
+            
+            <div class="load-more">
+                <button class="btn btn-primary" id="load-more-btn">
+                    <i class="fas fa-plus"></i> Load More Images
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Upload Section (Admin Only) -->
+    <section class="upload-section" id="upload-section" style="display: none;">
+        <div class="container">
+            <h2 class="section-title">Upload Images</h2>
+            <div class="upload-form">
+                <form id="image-upload-form">
+                    <div class="form-group">
+                        <label for="image-title">Image Title</label>
+                        <input type="text" id="image-title" name="title" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="image-category">Category</label>
+                        <select id="image-category" name="category" required>
+                            <option value="">Select Category</option>
+                            <option value="tournaments">Tournaments</option>
+                            <option value="awards">Awards Ceremony</option>
+                            <option value="workshops">Workshops</option>
+                            <option value="seminars">Seminars</option>
+                            <option value="education">Education Programs</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="image-description">Description</label>
+                        <textarea id="image-description" name="description" rows="3"></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="image-file">Select Images</label>
+                        <input type="file" id="image-file" name="images" multiple accept="image/*" required>
+                        <div class="file-preview" id="file-preview"></div>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-upload"></i> Upload Images
+                        </button>
+                        <button type="button" class="btn btn-secondary" id="cancel-upload">
+                            Cancel
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox">
+        <div class="lightbox-content">
+            <button class="lightbox-close" id="lightbox-close">
+                <i class="fas fa-times"></i>
+            </button>
+            <button class="lightbox-nav lightbox-prev" id="lightbox-prev">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="lightbox-nav lightbox-next" id="lightbox-next">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+            <div class="lightbox-image">
+                <img id="lightbox-img" src="" alt="">
+            </div>
+            <div class="lightbox-info">
+                <h3 id="lightbox-title"></h3>
+                <p id="lightbox-description"></p>
+                <span id="lightbox-category"></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Haryana Chess Association</h3>
+                    <p>Promoting chess excellence and education across Haryana since 1995.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="tournament-calendar.html">Tournaments</a></li>
+                        <li><a href="live-pairings.html">Results</a></li>
+                        <li><a href="certificate-download.html">Certificates</a></li>
+                        <li><a href="rulebook.html">Rules</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="education.html">Education</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="mission.html">Mission</a></li>
+                        <li><a href="online-registration.html">Registration</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+                    <p><i class="fas fa-envelope"></i> info@haryanachess.org</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Chandigarh, Haryana</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Haryana Chess Association. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+    <script src="scripts/gallery.js"></script>
+</body>
+</html> 

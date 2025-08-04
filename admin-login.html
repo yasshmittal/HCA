@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login - Haryana Chess Association</title>
+    <meta name="description" content="Admin login portal for Haryana Chess Association management system.">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="styles/main.css" rel="stylesheet">
+    <link href="styles/admin.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="assets/logo.png" alt="HCA Logo" class="logo-img">
+                <span class="logo-text">Haryana Chess Association</span>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="tournament-calendar.html" class="nav-link">Tournament Calendar</a>
+                <a href="live-pairings.html" class="nav-link">Live Pairings & Results</a>
+                <a href="certificate-download.html" class="nav-link">Certificate Download</a>
+                <a href="rulebook.html" class="nav-link">Rulebook</a>
+                <a href="online-registration.html" class="nav-link">Online Registration</a>
+                <a href="gallery.html" class="nav-link">Gallery</a>
+                <a href="mission.html" class="nav-link">Mission</a>
+                <a href="education.html" class="nav-link">HCA in Education</a>
+                <a href="admin-login.html" class="nav-link admin-link active">Admin</a>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Login Section -->
+    <section class="login-section">
+        <div class="container">
+            <div class="login-container">
+                <div class="login-header">
+                    <div class="login-logo">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h1>Admin Portal</h1>
+                    <p>Access the Haryana Chess Association management system</p>
+                </div>
+
+                <div class="login-tabs">
+                    <button class="tab-btn active" data-tab="admin">Admin Login</button>
+                    <button class="tab-btn" data-tab="dev">Developer Login</button>
+                </div>
+
+                <!-- Admin Login Form -->
+                <div class="login-form active" id="admin-form">
+                    <form id="admin-login-form">
+                        <div class="form-group">
+                            <label for="admin-email">Email Address</label>
+                            <div class="input-group">
+                                <i class="fas fa-envelope"></i>
+                                <input type="email" id="admin-email" name="email" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="admin-password">Password</label>
+                            <div class="input-group">
+                                <i class="fas fa-lock"></i>
+                                <input type="password" id="admin-password" name="password" required>
+                                <button type="button" class="toggle-password">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="admin-remember">
+                                <span class="checkmark"></span>
+                                Remember me
+                            </label>
+                        </div>
+
+                        <button type="submit" class="login-btn">
+                            <i class="fas fa-sign-in-alt"></i> Login as Admin
+                        </button>
+                    </form>
+
+                    <div class="login-footer">
+                        <a href="#" class="forgot-link">Forgot Password?</a>
+                        <a href="dev-login.html" class="dev-link">Developer Access</a>
+                    </div>
+                </div>
+
+                <!-- Developer Login Form -->
+                <div class="login-form" id="dev-form">
+                    <form id="dev-login-form">
+                        <div class="form-group">
+                            <label for="dev-email">Email Address</label>
+                            <div class="input-group">
+                                <i class="fas fa-envelope"></i>
+                                <input type="email" id="dev-email" name="email" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="dev-password">Password</label>
+                            <div class="input-group">
+                                <i class="fas fa-lock"></i>
+                                <input type="password" id="dev-password" name="password" required>
+                                <button type="button" class="toggle-password">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="dev-remember">
+                                <span class="checkmark"></span>
+                                Remember me
+                            </label>
+                        </div>
+
+                        <button type="submit" class="login-btn dev-login">
+                            <i class="fas fa-code"></i> Login as Developer
+                        </button>
+                    </form>
+
+                    <div class="login-footer">
+                        <a href="#" class="forgot-link">Forgot Password?</a>
+                        <a href="admin-login.html" class="admin-link">Admin Access</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Login Info -->
+            <div class="login-info">
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Admin Access</h3>
+                    <p>Manage tournaments, upload results, edit content, and oversee the chess association operations.</p>
+                    <ul>
+                        <li>Tournament Management</li>
+                        <li>Certificate Uploads</li>
+                        <li>Content Editing</li>
+                        <li>Gallery Management</li>
+                    </ul>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Developer Access</h3>
+                    <p>Advanced system access for developers to modify website structure and functionality.</p>
+                    <ul>
+                        <li>Live Visual Editor</li>
+                        <li>Code Modifications</li>
+                        <li>System Configuration</li>
+                        <li>User Management</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Security Notice -->
+    <section class="security-notice">
+        <div class="container">
+            <div class="notice-content">
+                <i class="fas fa-shield-alt"></i>
+                <h3>Security Notice</h3>
+                <p>This is a secure admin portal. All login attempts are logged and monitored. Unauthorized access attempts will be reported.</p>
+                <div class="security-features">
+                    <span><i class="fas fa-lock"></i> SSL Encrypted</span>
+                    <span><i class="fas fa-eye"></i> Activity Monitored</span>
+                    <span><i class="fas fa-history"></i> Access Logged</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Haryana Chess Association</h3>
+                    <p>Promoting chess excellence and education across Haryana since 1995.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="tournament-calendar.html">Tournaments</a></li>
+                        <li><a href="live-pairings.html">Results</a></li>
+                        <li><a href="certificate-download.html">Certificates</a></li>
+                        <li><a href="rulebook.html">Rules</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="education.html">Education</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="mission.html">Mission</a></li>
+                        <li><a href="online-registration.html">Registration</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+                    <p><i class="fas fa-envelope"></i> info@haryanachess.org</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Chandigarh, Haryana</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Haryana Chess Association. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+    <script src="scripts/admin.js"></script>
+</body>
+</html> 

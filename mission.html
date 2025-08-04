@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mission & Vision - Haryana Chess Association</title>
+    <meta name="description" content="Learn about the mission, vision, and objectives of Haryana Chess Association in promoting chess across Haryana.">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="styles/main.css" rel="stylesheet">
+    <link href="styles/mission.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="assets/logo.png" alt="HCA Logo" class="logo-img">
+                <span class="logo-text">Haryana Chess Association</span>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="tournament-calendar.html" class="nav-link">Tournament Calendar</a>
+                <a href="live-pairings.html" class="nav-link">Live Pairings & Results</a>
+                <a href="certificate-download.html" class="nav-link">Certificate Download</a>
+                <a href="rulebook.html" class="nav-link">Rulebook</a>
+                <a href="online-registration.html" class="nav-link">Online Registration</a>
+                <a href="gallery.html" class="nav-link">Gallery</a>
+                <a href="mission.html" class="nav-link active">Mission</a>
+                <a href="education.html" class="nav-link">HCA in Education</a>
+                <a href="admin-login.html" class="nav-link admin-link">Admin</a>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">Our Mission & Vision</h1>
+            <p class="page-subtitle">Promoting chess excellence and education across Haryana</p>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="mission-section">
+        <div class="container">
+            <div class="mission-content">
+                <div class="mission-card">
+                    <div class="mission-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h2>Our Mission</h2>
+                    <p id="mission-text">
+                        To promote and develop chess as a sport and educational tool across Haryana, 
+                        fostering strategic thinking, concentration, and sportsmanship among players 
+                        of all ages and skill levels. We strive to create opportunities for chess 
+                        enthusiasts to learn, compete, and excel in a supportive and inclusive environment.
+                    </p>
+                    <div class="edit-controls" id="mission-edit-controls" style="display: none;">
+                        <button class="btn btn-primary" onclick="saveMission()">
+                            <i class="fas fa-save"></i> Save Changes
+                        </button>
+                        <button class="btn btn-secondary" onclick="cancelEdit('mission')">
+                            <i class="fas fa-times"></i> Cancel
+                        </button>
+                    </div>
+                    <div class="view-controls" id="mission-view-controls">
+                        <button class="btn btn-secondary" onclick="editContent('mission')">
+                            <i class="fas fa-edit"></i> Edit Mission
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision Section -->
+    <section class="vision-section">
+        <div class="container">
+            <div class="vision-content">
+                <div class="vision-card">
+                    <div class="vision-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h2>Our Vision</h2>
+                    <p id="vision-text">
+                        To establish Haryana as a leading chess hub in India, where every individual 
+                        has access to quality chess education and competitive opportunities. We envision 
+                        a future where chess becomes an integral part of educational curriculum and 
+                        community development, producing world-class players and fostering a culture 
+                        of intellectual growth and strategic excellence.
+                    </p>
+                    <div class="edit-controls" id="vision-edit-controls" style="display: none;">
+                        <button class="btn btn-primary" onclick="saveVision()">
+                            <i class="fas fa-save"></i> Save Changes
+                        </button>
+                        <button class="btn btn-secondary" onclick="cancelEdit('vision')">
+                            <i class="fas fa-times"></i> Cancel
+                        </button>
+                    </div>
+                    <div class="view-controls" id="vision-view-controls">
+                        <button class="btn btn-secondary" onclick="editContent('vision')">
+                            <i class="fas fa-edit"></i> Edit Vision
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Objectives Section -->
+    <section class="objectives-section">
+        <div class="container">
+            <h2 class="section-title">Our Objectives</h2>
+            <div class="objectives-grid">
+                <div class="objective-card">
+                    <div class="objective-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3>Tournament Excellence</h3>
+                    <p>Organize high-quality tournaments at district, state, and national levels to provide competitive opportunities for players of all skill levels.</p>
+                </div>
+
+                <div class="objective-card">
+                    <div class="objective-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Education & Training</h3>
+                    <p>Develop comprehensive chess education programs for schools, colleges, and community centers to promote strategic thinking and cognitive development.</p>
+                </div>
+
+                <div class="objective-card">
+                    <div class="objective-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Community Development</h3>
+                    <p>Build a strong chess community across Haryana by establishing chess clubs, organizing events, and fostering collaboration among players.</p>
+                </div>
+
+                <div class="objective-card">
+                    <div class="objective-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>Talent Development</h3>
+                    <p>Identify and nurture young chess talents through specialized training programs, coaching camps, and mentorship initiatives.</p>
+                </div>
+
+                <div class="objective-card">
+                    <div class="objective-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Partnerships</h3>
+                    <p>Collaborate with educational institutions, government bodies, and corporate partners to expand chess reach and resources.</p>
+                </div>
+
+                <div class="objective-card">
+                    <div class="objective-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3>National Recognition</h3>
+                    <p>Position Haryana as a leading chess state in India by producing national and international level players and hosting prestigious events.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="values-section">
+        <div class="container">
+            <h2 class="section-title">Our Core Values</h2>
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Passion</h3>
+                    <p>We are driven by our passion for chess and commitment to excellence in everything we do.</p>
+                </div>
+
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-balance-scale"></i>
+                    </div>
+                    <h3>Fair Play</h3>
+                    <p>We promote integrity, honesty, and fair play in all our tournaments and activities.</p>
+                </div>
+
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h3>Inclusivity</h3>
+                    <p>We welcome players of all ages, backgrounds, and skill levels, creating an inclusive chess community.</p>
+                </div>
+
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3>Innovation</h3>
+                    <p>We embrace new ideas and technologies to enhance chess education and tournament experiences.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- History Section -->
+    <section class="history-section">
+        <div class="container">
+            <h2 class="section-title">Our Journey</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">1995</div>
+                    <div class="timeline-content">
+                        <h3>Foundation</h3>
+                        <p>Haryana Chess Association was established with the vision of promoting chess across the state.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-date">2000</div>
+                    <div class="timeline-content">
+                        <h3>First State Championship</h3>
+                        <p>Organized the inaugural Haryana State Chess Championship, marking a milestone in chess development.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-date">2010</div>
+                    <div class="timeline-content">
+                        <h3>Education Initiative</h3>
+                        <p>Launched chess education programs in government schools across Haryana districts.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-date">2015</div>
+                    <div class="timeline-content">
+                        <h3>National Recognition</h3>
+                        <p>Haryana players achieved significant success in national tournaments and championships.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-date">2020</div>
+                    <div class="timeline-content">
+                        <h3>Digital Transformation</h3>
+                        <p>Embraced technology with online tournaments and digital chess platforms.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-date">2024</div>
+                    <div class="timeline-content">
+                        <h3>Future Forward</h3>
+                        <p>Continuing to expand chess reach and develop world-class players for Haryana.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Haryana Chess Association</h3>
+                    <p>Promoting chess excellence and education across Haryana since 1995.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="tournament-calendar.html">Tournaments</a></li>
+                        <li><a href="live-pairings.html">Results</a></li>
+                        <li><a href="certificate-download.html">Certificates</a></li>
+                        <li><a href="rulebook.html">Rules</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="education.html">Education</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="mission.html">Mission</a></li>
+                        <li><a href="online-registration.html">Registration</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+                    <p><i class="fas fa-envelope"></i> info@haryanachess.org</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Chandigarh, Haryana</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Haryana Chess Association. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+    <script src="scripts/mission.js"></script>
+</body>
+</html> 

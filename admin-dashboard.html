@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Haryana Chess Association</title>
+    <meta name="description" content="Admin dashboard for Haryana Chess Association management system.">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="styles/main.css" rel="stylesheet">
+    <link href="styles/admin-dashboard.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-chess-king" style="font-size: 2rem; color: var(--gold);"></i>
+                <span class="logo-text">HCA Admin</span>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">View Site</a>
+                <a href="admin-dashboard.html" class="nav-link active">Dashboard</a>
+                <a href="admin-login.html" class="nav-link">Logout</a>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Dashboard Header -->
+    <section class="dashboard-header">
+        <div class="container">
+            <h1 class="page-title">Admin Dashboard</h1>
+            <p class="page-subtitle">Manage tournaments, content, and system settings</p>
+            <div class="admin-info">
+                <span><i class="fas fa-user"></i> Admin User</span>
+                <span><i class="fas fa-clock"></i> <span id="current-time"></span></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Stats -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3>12</h3>
+                        <p>Active Tournaments</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3>1,247</h3>
+                        <p>Registered Players</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3>856</h3>
+                        <p>Certificates Issued</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-images"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3>234</h3>
+                        <p>Gallery Images</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Admin Tools -->
+    <section class="admin-tools">
+        <div class="container">
+            <h2 class="section-title">Admin Tools</h2>
+            <div class="tools-grid">
+                <!-- Excel Upload Section -->
+                <div class="tool-card">
+                    <div class="tool-header">
+                        <i class="fas fa-file-excel"></i>
+                        <h3>Excel Uploads</h3>
+                    </div>
+                    <div class="tool-content">
+                        <div class="upload-section">
+                            <h4>Upload Tournament Results</h4>
+                            <input type="file" id="results-file" accept=".xlsx,.xls" data-file-type="excel">
+                            <button class="btn btn-primary" onclick="uploadFile('results')">
+                                <i class="fas fa-upload"></i> Upload Results
+                            </button>
+                        </div>
+                        
+                        <div class="upload-section">
+                            <h4>Upload Certificates</h4>
+                            <input type="file" id="certificates-file" accept=".xlsx,.xls" data-file-type="excel">
+                            <button class="btn btn-primary" onclick="uploadFile('certificates')">
+                                <i class="fas fa-upload"></i> Upload Certificates
+                            </button>
+                        </div>
+                        
+                        <div class="upload-section">
+                            <h4>Upload Pairings</h4>
+                            <input type="file" id="pairings-file" accept=".xlsx,.xls" data-file-type="excel">
+                            <button class="btn btn-primary" onclick="uploadFile('pairings')">
+                                <i class="fas fa-upload"></i> Upload Pairings
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Content Management -->
+                <div class="tool-card">
+                    <div class="tool-header">
+                        <i class="fas fa-edit"></i>
+                        <h3>Content Management</h3>
+                    </div>
+                    <div class="tool-content">
+                        <div class="content-section">
+                            <h4>Mission & Vision</h4>
+                            <button class="btn btn-secondary" onclick="window.open('mission.html', '_blank')">
+                                <i class="fas fa-bullseye"></i> Edit Mission
+                            </button>
+                        </div>
+                        
+                        <div class="content-section">
+                            <h4>Gallery Management</h4>
+                            <button class="btn btn-secondary" onclick="window.open('gallery.html', '_blank')">
+                                <i class="fas fa-images"></i> Manage Gallery
+                            </button>
+                        </div>
+                        
+                        <div class="content-section">
+                            <h4>Tournament Calendar</h4>
+                            <button class="btn btn-secondary" onclick="window.open('tournament-calendar.html', '_blank')">
+                                <i class="fas fa-calendar"></i> Edit Calendar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- System Settings -->
+                <div class="tool-card">
+                    <div class="tool-header">
+                        <i class="fas fa-cog"></i>
+                        <h3>System Settings</h3>
+                    </div>
+                    <div class="tool-content">
+                        <div class="setting-section">
+                            <h4>User Management</h4>
+                            <button class="btn btn-secondary" onclick="manageUsers()">
+                                <i class="fas fa-users"></i> Manage Users
+                            </button>
+                        </div>
+                        
+                        <div class="setting-section">
+                            <h4>Backup & Restore</h4>
+                            <button class="btn btn-secondary" onclick="backupSystem()">
+                                <i class="fas fa-download"></i> Backup Data
+                            </button>
+                        </div>
+                        
+                        <div class="setting-section">
+                            <h4>System Logs</h4>
+                            <button class="btn btn-secondary" onclick="viewLogs()">
+                                <i class="fas fa-list"></i> View Logs
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Actions -->
+                <div class="tool-card">
+                    <div class="tool-header">
+                        <i class="fas fa-bolt"></i>
+                        <h3>Quick Actions</h3>
+                    </div>
+                    <div class="tool-content">
+                        <div class="action-section">
+                            <h4>Add New Tournament</h4>
+                            <button class="btn btn-primary" onclick="addTournament()">
+                                <i class="fas fa-plus"></i> Create Tournament
+                            </button>
+                        </div>
+                        
+                        <div class="action-section">
+                            <h4>Send Notifications</h4>
+                            <button class="btn btn-primary" onclick="sendNotification()">
+                                <i class="fas fa-bell"></i> Send Notification
+                            </button>
+                        </div>
+                        
+                        <div class="action-section">
+                            <h4>Generate Reports</h4>
+                            <button class="btn btn-primary" onclick="generateReport()">
+                                <i class="fas fa-chart-bar"></i> Generate Report
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recent Activity -->
+    <section class="recent-activity">
+        <div class="container">
+            <h2 class="section-title">Recent Activity</h2>
+            <div class="activity-list">
+                <div class="activity-item">
+                    <div class="activity-icon">
+                        <i class="fas fa-upload"></i>
+                    </div>
+                    <div class="activity-content">
+                        <h4>Tournament Results Uploaded</h4>
+                        <p>State Championship 2024 results uploaded successfully</p>
+                        <span class="activity-time">2 hours ago</span>
+                    </div>
+                </div>
+                
+                <div class="activity-item">
+                    <div class="activity-icon">
+                        <i class="fas fa-edit"></i>
+                    </div>
+                    <div class="activity-content">
+                        <h4>Mission Updated</h4>
+                        <p>Mission statement updated by admin user</p>
+                        <span class="activity-time">1 day ago</span>
+                    </div>
+                </div>
+                
+                <div class="activity-item">
+                    <div class="activity-icon">
+                        <i class="fas fa-image"></i>
+                    </div>
+                    <div class="activity-content">
+                        <h4>Gallery Images Added</h4>
+                        <p>5 new images added to tournament gallery</p>
+                        <span class="activity-time">2 days ago</span>
+                    </div>
+                </div>
+                
+                <div class="activity-item">
+                    <div class="activity-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div class="activity-content">
+                        <h4>Certificates Generated</h4>
+                        <p>45 certificates generated for Youth Championship</p>
+                        <span class="activity-time">3 days ago</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Haryana Chess Association</h3>
+                    <p>Admin Dashboard - Managing chess excellence across Haryana</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">View Website</a></li>
+                        <li><a href="admin-login.html">Logout</a></li>
+                        <li><a href="test.html">Test Page</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <p><i class="fas fa-envelope"></i> admin@haryanachess.org</p>
+                    <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Haryana Chess Association. Admin Dashboard.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+    <script src="scripts/admin-dashboard.js"></script>
+</body>
+</html>
