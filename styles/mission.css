@@ -1,0 +1,453 @@
+/* Mission Page Styles */
+
+/* Mission Section */
+.mission-section {
+    padding: 80px 0;
+    background-color: var(--navy-light);
+}
+
+.mission-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.mission-card {
+    background-color: var(--navy-blue);
+    padding: 3rem;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: var(--shadow-dark);
+    border: 1px solid rgba(255, 215, 0, 0.2);
+    position: relative;
+}
+
+.mission-icon {
+    width: 100px;
+    height: 100px;
+    background-color: var(--gold);
+    color: var(--navy-blue);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    margin: 0 auto 2rem;
+}
+
+.mission-card h2 {
+    color: var(--gold);
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.mission-card p {
+    color: var(--gray-light);
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    text-align: left;
+}
+
+/* Vision Section */
+.vision-section {
+    padding: 80px 0;
+    background-color: var(--navy-blue);
+}
+
+.vision-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.vision-card {
+    background-color: var(--navy-light);
+    padding: 3rem;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: var(--shadow-dark);
+    border: 1px solid rgba(255, 215, 0, 0.2);
+    position: relative;
+}
+
+.vision-icon {
+    width: 100px;
+    height: 100px;
+    background-color: var(--gold);
+    color: var(--navy-blue);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    margin: 0 auto 2rem;
+}
+
+.vision-card h2 {
+    color: var(--gold);
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.vision-card p {
+    color: var(--gray-light);
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    text-align: left;
+}
+
+/* Edit Controls */
+.edit-controls,
+.view-controls {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.edit-controls .btn,
+.view-controls .btn {
+    padding: 12px 24px;
+    font-size: 1rem;
+}
+
+/* Objectives Section */
+.objectives-section {
+    padding: 80px 0;
+    background-color: var(--navy-light);
+}
+
+.objectives-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.objective-card {
+    background-color: var(--navy-blue);
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: var(--shadow);
+    border: 1px solid rgba(255, 215, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.objective-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-dark);
+}
+
+.objective-icon {
+    width: 80px;
+    height: 80px;
+    background-color: var(--gold);
+    color: var(--navy-blue);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    margin: 0 auto 1.5rem;
+}
+
+.objective-card h3 {
+    color: var(--gold);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.objective-card p {
+    color: var(--gray-light);
+    line-height: 1.6;
+}
+
+/* Values Section */
+.values-section {
+    padding: 80px 0;
+    background-color: var(--navy-blue);
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.value-card {
+    background-color: var(--navy-light);
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: var(--shadow);
+    border: 1px solid rgba(255, 215, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.value-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-dark);
+}
+
+.value-icon {
+    width: 70px;
+    height: 70px;
+    background-color: var(--gold);
+    color: var(--navy-blue);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    margin: 0 auto 1rem;
+}
+
+.value-card h3 {
+    color: var(--gold);
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.value-card p {
+    color: var(--gray-light);
+    line-height: 1.6;
+}
+
+/* History Section */
+.history-section {
+    padding: 80px 0;
+    background-color: var(--navy-light);
+}
+
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 3rem auto 0;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background-color: var(--gold);
+    transform: translateX(-50%);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 3rem;
+    width: 45%;
+}
+
+.timeline-item:nth-child(odd) {
+    left: 0;
+}
+
+.timeline-item:nth-child(even) {
+    left: 55%;
+}
+
+.timeline-date {
+    position: absolute;
+    top: 0;
+    background-color: var(--gold);
+    color: var(--navy-blue);
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.timeline-item:nth-child(odd) .timeline-date {
+    right: -120px;
+}
+
+.timeline-item:nth-child(even) .timeline-date {
+    left: -120px;
+}
+
+.timeline-content {
+    background-color: var(--navy-blue);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+    border: 1px solid rgba(255, 215, 0, 0.2);
+    position: relative;
+}
+
+.timeline-content::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+}
+
+.timeline-item:nth-child(odd) .timeline-content::before {
+    right: -20px;
+    border-left-color: var(--navy-blue);
+}
+
+.timeline-item:nth-child(even) .timeline-content::before {
+    left: -20px;
+    border-right-color: var(--navy-blue);
+}
+
+.timeline-content h3 {
+    color: var(--gold);
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.timeline-content p {
+    color: var(--gray-light);
+    line-height: 1.6;
+}
+
+/* Editable Content Styles */
+.editable-content {
+    position: relative;
+}
+
+.editable-content textarea {
+    width: 100%;
+    min-height: 200px;
+    padding: 1rem;
+    border: 2px solid var(--gold);
+    border-radius: 10px;
+    background-color: var(--navy-light);
+    color: var(--white);
+    font-size: 1.1rem;
+    line-height: 1.6;
+    resize: vertical;
+    font-family: inherit;
+}
+
+.editable-content textarea:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .mission-card,
+    .vision-card {
+        padding: 2rem;
+    }
+
+    .mission-card h2,
+    .vision-card h2 {
+        font-size: 2rem;
+    }
+
+    .mission-card p,
+    .vision-card p {
+        font-size: 1.1rem;
+    }
+
+    .objectives-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .values-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .timeline::before {
+        left: 20px;
+    }
+
+    .timeline-item {
+        width: calc(100% - 50px);
+        left: 50px !important;
+    }
+
+    .timeline-item:nth-child(odd) .timeline-date,
+    .timeline-item:nth-child(even) .timeline-date {
+        left: -80px;
+        right: auto;
+    }
+
+    .timeline-item:nth-child(odd) .timeline-content::before,
+    .timeline-item:nth-child(even) .timeline-content::before {
+        left: -20px;
+        right: auto;
+        border-right-color: var(--navy-blue);
+        border-left-color: transparent;
+    }
+
+    .edit-controls,
+    .view-controls {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .edit-controls .btn,
+    .view-controls .btn {
+        width: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .mission-card,
+    .vision-card {
+        padding: 1.5rem;
+    }
+
+    .mission-icon,
+    .vision-icon {
+        width: 80px;
+        height: 80px;
+        font-size: 2rem;
+    }
+
+    .mission-card h2,
+    .vision-card h2 {
+        font-size: 1.8rem;
+    }
+
+    .objective-card,
+    .value-card {
+        padding: 1.5rem;
+    }
+
+    .timeline-content {
+        padding: 1.5rem;
+    }
+}
+
+/* Animation for timeline items */
+.timeline-item {
+    animation: fadeInUp 0.6s ease;
+}
+
+.timeline-item:nth-child(1) { animation-delay: 0.1s; }
+.timeline-item:nth-child(2) { animation-delay: 0.2s; }
+.timeline-item:nth-child(3) { animation-delay: 0.3s; }
+.timeline-item:nth-child(4) { animation-delay: 0.4s; }
+.timeline-item:nth-child(5) { animation-delay: 0.5s; }
+.timeline-item:nth-child(6) { animation-delay: 0.6s; }
+
+/* Animation for objective and value cards */
+.objective-card,
+.value-card {
+    animation: fadeInUp 0.6s ease;
+}
+
+.objective-card:nth-child(1) { animation-delay: 0.1s; }
+.objective-card:nth-child(2) { animation-delay: 0.2s; }
+.objective-card:nth-child(3) { animation-delay: 0.3s; }
+.objective-card:nth-child(4) { animation-delay: 0.4s; }
+.objective-card:nth-child(5) { animation-delay: 0.5s; }
+.objective-card:nth-child(6) { animation-delay: 0.6s; }
+
+.value-card:nth-child(1) { animation-delay: 0.1s; }
+.value-card:nth-child(2) { animation-delay: 0.2s; }
+.value-card:nth-child(3) { animation-delay: 0.3s; }
+.value-card:nth-child(4) { animation-delay: 0.4s; } 
